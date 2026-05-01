@@ -2,14 +2,14 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>เป็นแฟนกันนะ 🥺💖</title>
+<title>กำลังใจจากคิตตี้ 💖</title>
 
 <style>
 body {
   font-family: sans-serif;
   text-align: center;
-  background: linear-gradient(to right, #ffd6e0, #ffe9f0);
-  padding-top: 60px;
+  background: linear-gradient(to right, #ffd6e0, #ffeef5);
+  padding-top: 50px;
 }
 
 .container {
@@ -21,12 +21,16 @@ body {
 }
 
 img {
-  width: 150px;
-  margin-bottom: 20px;
+  width: 180px;
+  margin-bottom: 15px;
 }
 
 h1 {
-  font-size: 26px;
+  color: #ff6b81;
+}
+
+p {
+  font-size: 18px;
 }
 
 button {
@@ -38,13 +42,13 @@ button {
   cursor: pointer;
 }
 
-.yes {
+.love {
   background: #ff6b81;
   color: white;
 }
 
-.no {
-  background: #ddd;
+.hug {
+  background: #ffc2d1;
 }
 </style>
 </head>
@@ -52,22 +56,23 @@ button {
 <body>
 
 <div class="container">
-  <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="cute">
+  <!-- รูปคิตตี้ -->
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA2ZDVhZGU5YzM0ZDEzOTRjYjE0Y2Q5ZTI3NjA3MjNhZDM0Y2Q0MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oriO0OEd9QIDdllqo/giphy.gif" alt="kitty">
 
-  <h1>เป็นแฟนกันมั้ย 🥺💖</h1>
-  <p>เราตั้งใจทำเว็บนี้ให้เธอเลยนะ 💌</p>
+  <h1>สู้ๆนะคนเก่ง 🥺💖</h1>
+  <p>ไม่ว่าเธอจะเหนื่อยแค่ไหน เราอยู่ข้างๆเสมอ 🫶</p>
 
-  <button class="yes" onclick="yes()">💖 ตกลง</button>
-  <button class="no" onclick="no()">🙈 เขินแป๊บ</button>
+  <button class="love" onclick="love()">💖 รับกำลังใจ</button>
+  <button class="hug" onclick="hug()">🤗 กอดหน่อย</button>
 </div>
 
 <script>
-function yes() {
-  alert("เย้! ได้แฟนแล้ววว 💖🥰");
+function love() {
+  alert("เราภูมิใจในตัวเธอมากเลยนะ 💖 เก่งมากๆ!");
 }
 
-function no() {
-  alert("เขินได้แต่อย่าหนีน้า 😆");
+function hug() {
+  alert("กอดๆนะ 🤗 ไม่ต้องเก่งตลอดก็ได้ เราอยู่ตรงนี้เสมอ");
 }
 </script>
 
