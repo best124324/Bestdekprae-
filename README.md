@@ -2,17 +2,18 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>ขอเป็นแฟน 😏</title>
+<title>โดนจับเป็นแฟน 😈</title>
 
 <style>
 body {
   font-family: sans-serif;
   text-align: center;
-  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
   padding-top: 100px;
+  overflow: hidden;
 }
 
-h1 { font-size: 28px; }
+h1 { font-size: 30px; color: white; }
 
 button {
   padding: 12px 20px;
@@ -21,46 +22,66 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  position: relative;
+  position: absolute;
 }
 
 .yes {
-  background: #ff4d6d;
+  background: #ff1744;
   color: white;
+  left: 40%;
+  top: 50%;
 }
 
 .no {
-  background: #ccc;
-  position: absolute;
+  background: #eee;
+  left: 55%;
+  top: 50%;
 }
 </style>
 </head>
 
 <body>
 
-<h1>💘 ระบบสุ่มเลือกคุณแล้ว!</h1>
-<p>จะเป็นแฟนกับเรามั้ย? 🤭</p>
+<h1>💘 คุณโดนเลือกแล้ว!</h1>
+<p style="color:white;">จะเป็นแฟนกับเรามั้ย? 😏</p>
 
 <button class="yes" onclick="yes()">💖 ตกลง</button>
 <button class="no" id="noBtn">🙄 ไม่เอา</button>
 
 <script>
 function yes() {
-  alert("เย้! หนีไม่รอดแล้วนะ 😆💖");
+  let count = 0;
+  let interval = setInterval(() => {
+    alert("เป็นแฟนแล้วนะ 😆💖");
+    count++;
+    if(count > 3) clearInterval(interval);
+  }, 500);
 }
 
 const noBtn = document.getElementById("noBtn");
 
+// ปุ่มหนีขั้นเทพ
 noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * window.innerWidth - 100;
-  const y = Math.random() * window.innerHeight - 50;
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
+  moveBtn();
 });
 
+// กดก็หนี
 noBtn.addEventListener("click", () => {
-  alert("กดไม่ทันหรอกกก 😂");
+  alert("ไม่ให้กดดด 😂");
+  moveBtn();
 });
+
+function moveBtn() {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+
+// เด้งข้อความหลอกตอนเข้าเว็บ
+setTimeout(() => {
+  alert("⚠️ แจ้งเตือน: คุณมีแฟนแล้ว 1 คน");
+}, 1000);
 </script>
 
 </body>
